@@ -1,0 +1,39 @@
+SCOPING - MVP
+
+~ Writing ~
+
++ 4 main characters: name, character description, personal quest, fighting stats, event ideas
++ maybe 2 side characters? (if time)
++ rooms: perhaps encounter 7 rooms / level out of a pool of 15? and 3 levels before boss = 45 total. Rough event:fight ratio of 1:1
++ quests/leveling up/skill trees
++ general story events and dialogue
+
+
+~ Game components ~
+
+Room engine
+
+Title screen
+- Title text
+- New Game
+- Loadsave
+
+Action screen
+- Text box
+- Option buttons
+- Scenario/character art (if time)
+
+Character screen
+- Character name
+- Character art
+- Character description
+- Personal quest description
+- Skill tree menu, separated by page
+
+Battle screen
+- Animations
+- TBD based on fighting mechanics
+
+Map screen (if time)
+- Locations, labeled
+- Current location
