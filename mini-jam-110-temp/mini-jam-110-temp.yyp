@@ -1,10 +1,8 @@
 {
   "resources": [
-    {"id":{"name":"spr_loadGameButton","path":"sprites/spr_loadGameButton/spr_loadGameButton.yy",},"order":2,},
     {"id":{"name":"scr_getCurrentChar","path":"scripts/scr_getCurrentChar/scr_getCurrentChar.yy",},"order":4,},
     {"id":{"name":"scr_getCurrentEvent","path":"scripts/scr_getCurrentEvent/scr_getCurrentEvent.yy",},"order":3,},
     {"id":{"name":"rm_character","path":"rooms/rm_character/rm_character.yy",},"order":2,},
-    {"id":{"name":"spr_actionTextBox","path":"sprites/spr_actionTextBox/spr_actionTextBox.yy",},"order":3,},
     {"id":{"name":"scr_actionSelected","path":"scripts/scr_actionSelected/scr_actionSelected.yy",},"order":1,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":5,},
     {"id":{"name":"obj_newGameButton","path":"objects/obj_newGameButton/obj_newGameButton.yy",},"order":0,},
@@ -12,6 +10,12 @@
     {"id":{"name":"obj_charDescription","path":"objects/obj_charDescription/obj_charDescription.yy",},"order":7,},
     {"id":{"name":"spr_titleText","path":"sprites/spr_titleText/spr_titleText.yy",},"order":0,},
     {"id":{"name":"fnt_charName","path":"fonts/fnt_charName/fnt_charName.yy",},"order":1,},
+    {"id":{"name":"spr_loadGameButton","path":"sprites/spr_loadGameButton/spr_loadGameButton.yy",},"order":3,},
+    {"id":{"name":"spr_actionTextBox","path":"sprites/spr_actionTextBox/spr_actionTextBox.yy",},"order":4,},
+    {"id":{"name":"spr_healthBox","path":"sprites/spr_healthBox/spr_healthBox.yy",},"order":7,},
+    {"id":{"name":"obj_turnBox","path":"objects/obj_turnBox/obj_turnBox.yy",},"order":7,},
+    {"id":{"name":"spr_turnBox","path":"sprites/spr_turnBox/spr_turnBox.yy",},"order":8,},
+    {"id":{"name":"obj_healthBox","path":"objects/obj_healthBox/obj_healthBox.yy",},"order":6,},
     {"id":{"name":"obj_action2","path":"objects/obj_action2/obj_action2.yy",},"order":4,},
     {"id":{"name":"obj_actionTextBox","path":"objects/obj_actionTextBox/obj_actionTextBox.yy",},"order":2,},
     {"id":{"name":"scr_setCurrentEvent","path":"scripts/scr_setCurrentEvent/scr_setCurrentEvent.yy",},"order":5,},
