@@ -4,9 +4,9 @@
 draw_self();
 
 draw_set_color(c_black);
-draw_set_font(fnt_actionDescription);
+draw_set_font(FONT_SMALL);
 draw_set_valign(fa_top);
 
-draw_text_ext(x+30, y+50, 
+draw_text_ext(x+4, y+8, 
 	scr_getCurrentEventName(),
-	30, 500);
+	30, 150);//spr_actionTextBox.width - 20);
