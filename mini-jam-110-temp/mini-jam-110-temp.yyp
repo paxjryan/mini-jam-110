@@ -1,6 +1,12 @@
 {
   "resources": [
-    {"id":{"name":"asdf","path":"rooms/asdf/asdf.yy",},"order":0,},
+    {"id":{"name":"spr_loadGameButton","path":"sprites/spr_loadGameButton/spr_loadGameButton.yy",},"order":3,},
+    {"id":{"name":"obj_newGameButton","path":"objects/obj_newGameButton/obj_newGameButton.yy",},"order":0,},
+    {"id":{"name":"spr_titleText","path":"sprites/spr_titleText/spr_titleText.yy",},"order":0,},
+    {"id":{"name":"rm_action","path":"rooms/rm_action/rm_action.yy",},"order":1,},
+    {"id":{"name":"spr_newGameButton","path":"sprites/spr_newGameButton/spr_newGameButton.yy",},"order":1,},
+    {"id":{"name":"obj_loadGameButton","path":"objects/obj_loadGameButton/obj_loadGameButton.yy",},"order":1,},
+    {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
@@ -14,7 +20,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"asdf","path":"rooms/asdf/asdf.yy",},},
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
+    {"roomId":{"name":"rm_action","path":"rooms/rm_action/rm_action.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

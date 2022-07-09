@@ -3,7 +3,7 @@
   "inheritCode": false,
   "layers": [
     {"name":"Instances","visible":true,"hierarchyFrozen":false,"instances":[],"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"name":"Background","visible":true,"hierarchyFrozen":false,"spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","tags":[],"resourceType":"GMRBackgroundLayer",},
+    {"name":"Background","visible":true,"hierarchyFrozen":false,"spriteId":null,"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
   "isDnd": false,
@@ -46,7 +46,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "asdf",
+  "name": "rm_action",
   "tags": [],
   "resourceType": "GMRoom",
 }
