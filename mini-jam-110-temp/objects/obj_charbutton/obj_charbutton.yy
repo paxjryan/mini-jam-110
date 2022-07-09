@@ -1,8 +1,8 @@
 {
-  "name": "obj_actionTextBox",
+  "name": "obj_charButton",
   "spriteId": {
-    "name": "spr_actionTextBox",
-    "path": "sprites/spr_actionTextBox/spr_actionTextBox.yy",
+    "name": "spr_charButton",
+    "path": "sprites/spr_charButton/spr_charButton.yy",
   },
   "spriteMaskId": null,
   "visible": true,
@@ -23,7 +23,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

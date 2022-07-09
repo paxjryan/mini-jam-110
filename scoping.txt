@@ -14,20 +14,19 @@ SCOPING - MVP
 Room engine
 
 Title screen
-- Title text
-- New Game
+- DONE Title text
+- DONE New Game
 - Loadsave
 
 Action screen
-- Text box
-- Option buttons
+- DONE Text box
+- DONE Option buttons
 - Scenario/character art (if time)
 
 Character screen
 - Character name
 - Character art
-- Character description
-- Personal quest description
+- Character description and personal quest
 - Skill tree menu, separated by page
 
 Battle screen

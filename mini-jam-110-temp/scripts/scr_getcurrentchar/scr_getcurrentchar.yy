@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_loadRoom",
+  "name": "scr_getCurrentChar",
   "tags": [],
   "resourceType": "GMScript",
 }

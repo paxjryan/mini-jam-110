@@ -1,5 +1,5 @@
 {
-  "name": "obj_roomsController",
+  "name": "obj_controller",
   "spriteId": null,
   "spriteMaskId": null,
   "visible": true,

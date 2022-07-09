@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Pandora",
+    "description": "hewwo my name's pandora",
+    "quest": "open a jar at all costs",
+    "skills": ["asdf", "asdf2"]
+  },
+  {
+    "name": "Thor",
+    "description": "GRAWR Thor smash!!",
+    "quest": "eat too many bananas",
+    "skills": ["smite", "smite harder"]
+  },
+  {
+    "name": "Orpheus",
+    "description": "doot doot music pretty don't look back",
+    "quest": "HADES",
+    "skills": ["run Forest run", "ahh references"]
+  },
+  {
+    "name": "Apollo",
+    "description": "hiyo just a normal person here",
+    "quest": "normal person things nothing to see",
+    "skills": ["allow the sun to consume the earth", "on second thought don't"]
+  }
+]

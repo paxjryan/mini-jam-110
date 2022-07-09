@@ -8,5 +8,5 @@ draw_set_font(fnt_actionDescription);
 draw_set_valign(fa_top);
 
 draw_text_ext(x+30, y+50, 
-	obj_roomsController.roomDescription,
+	scr_getCurrentEventName(),
 	30, 500);

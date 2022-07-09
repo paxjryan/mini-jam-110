@@ -1,9 +1,6 @@
 {
-  "name": "obj_actionTextBox",
-  "spriteId": {
-    "name": "spr_actionTextBox",
-    "path": "sprites/spr_actionTextBox/spr_actionTextBox.yy",
-  },
+  "name": "obj_charName",
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
   "solid": false,
