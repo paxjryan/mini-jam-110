@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Placeholder Buttons",
+    "path": "folders/Objects/Placeholder Buttons.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_charButton",

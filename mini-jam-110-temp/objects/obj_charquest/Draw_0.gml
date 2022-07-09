@@ -3,4 +3,4 @@
 
 draw_set_font(FONT_SMALL);
 draw_set_color(c_white);
-draw_text(x, y, scr_getCurrentCharQuest());
+draw_text(x, y, scr_getCharQuest(obj_controller.currentChar));

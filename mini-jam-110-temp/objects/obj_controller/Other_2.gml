@@ -29,5 +29,12 @@ if (file_exists("characters.json")) {
 } 
 
 // Initialize event and char
-currentEvent = events[0];
-currentChar = chars[0];
+currentEvent = 0;
+currentChar = 0;
+
+// Initialize party to hold only main character
+party = [];
+array_push(party, scr_createCharObj(0));
+array_push(party, scr_createCharObj(1));
+array_push(party, scr_createCharObj(2));
+array_push(party, scr_createCharObj(3));
