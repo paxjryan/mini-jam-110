@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Start",
+    "action1": 1,
+    "action2": 2
+  },
+  {
+    "name": "Hello!",
+    "action1": 3,
+    "action2": 4
+  },
+  {
+    "name": "Return to start",
+    "action1": 0,
+    "action2": 0
+  },
+  {
+    "name": "Random time!",
+    "action1": 3,
+    "action2": 2
+  },
+  {
+    "name": "Into the unknown!",
+    "action1": 1,
+    "action2": 5
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Start\n\n1: Hello\n2: Return to start",
+    "action1": 1,
+    "action2": 2
+  },
+  {
+    "name": "Hello!\n\n1: Random time!\n2:Into the unknown!",
+    "action1": 3,
+    "action2": 4
+  },
+  {
+    "name": "Return to start\n\n1: Start\n2: Start",
+    "action1": 0,
+    "action2": 0
+  },
+  {
+    "name": "Random time!\n\n1: ??\n2: ??",
+    "action1": 3,
+    "action2": 2
+  },
+  {
+    "name": "Into the unknown!\n\n1: Hello!\n2: The Unknown",
+    "action1": 1,
+    "action2": 5
+  }
+]
