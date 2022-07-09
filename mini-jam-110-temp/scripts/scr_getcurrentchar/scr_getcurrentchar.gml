@@ -11,3 +11,7 @@ function scr_getCurrentCharName() {
 function scr_getCurrentCharDescription() {
 	return obj_controller.currentChar.description;	
 }
+
+function scr_getCurrentCharQuest() {
+	return "quest: " + obj_controller.currentChar.quest;	
+}

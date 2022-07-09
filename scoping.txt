@@ -24,9 +24,10 @@ Action screen
 - Scenario/character art (if time)
 
 Character screen
-- Character name
+- DONE Character name
 - Character art
-- Character description and personal quest
+- DONE Character description 
+- Personal quest
 - Skill tree menu, separated by page
 
 Battle screen
