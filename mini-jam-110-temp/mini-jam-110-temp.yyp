@@ -37,6 +37,7 @@
     {"id":{"name":"obj_combatController","path":"objects/obj_combatController/obj_combatController.yy",},"order":2,},
     {"id":{"name":"spr_charButton","path":"sprites/spr_charButton/spr_charButton.yy",},"order":6,},
     {"id":{"name":"obj_char","path":"objects/obj_char/obj_char.yy",},"order":10,},
+    {"id":{"name":"scr_charButtonSelected","path":"scripts/scr_charButtonSelected/scr_charButtonSelected.yy",},"order":10,},
     {"id":{"name":"obj_charQuest","path":"objects/obj_charQuest/obj_charQuest.yy",},"order":3,},
     {"id":{"name":"obj_charButton","path":"objects/obj_charButton/obj_charButton.yy",},"order":2,},
     {"id":{"name":"scr_createCharObj","path":"scripts/scr_createCharObj/scr_createCharObj.yy",},"order":7,},

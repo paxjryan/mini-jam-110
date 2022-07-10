@@ -5,11 +5,11 @@ function scr_getChar(partyIndex){
 }
 
 function scr_getCharName(partyIndex) {
-	return obj_controller.party[partyIndex].name;	
+	return scr_getChar(partyIndex).name;	
 }
 
 function scr_getCharDescription(partyIndex) {
-	return obj_controller.party[partyIndex].description;
+	return scr_getChar(partyIndex).description;
 }
 
 function scr_getCharQuest(partyIndex) {
