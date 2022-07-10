@@ -5,7 +5,7 @@ function scr_getChar(partyIndex){
 }
 
 function scr_getCharName(partyIndex) {
-	return scr_getChar(partyIndex).name;	
+	return scr_getChar(partyIndex).charName;	
 }
 
 function scr_getCharDescription(partyIndex) {

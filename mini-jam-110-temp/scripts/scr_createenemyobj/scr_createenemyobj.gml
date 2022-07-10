@@ -10,5 +10,12 @@ function scr_createEnemyObj(xPosition, yPosition, n) {
 	_enemyObj.speedOffset = obj_controller.enemies[n].speedOffset;
 	_enemyObj.armor = obj_controller.enemies[n].armor;
 	_enemyObj.attack = obj_controller.enemies[n].attack;
+	with _enemyObj
+	{
+		scr_setMaxHealth(maxHealth)
+		scr_setMaxSpeed(maxSpeed)
+		scr_setHealth(maxHealth)
+		scr_setSpeed(maxSpeed)
+	}
 	return _enemyObj;
 }

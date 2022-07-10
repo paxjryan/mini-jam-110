@@ -8,7 +8,6 @@ function scr_charToIndex(charName){
 	case "Orpheus": return 2;
 	case "Apollo": return 3;
 	}
-	return false;
 }
 function scr_enemyToIndex(enemyName){
 	switch(enemyName)
@@ -16,5 +15,4 @@ function scr_enemyToIndex(enemyName){
 	case "Slime": return 0;
 	case "Shield Slime": return 1;
 	}
-	return false;
 }

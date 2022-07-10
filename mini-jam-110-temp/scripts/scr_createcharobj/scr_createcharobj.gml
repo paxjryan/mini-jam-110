@@ -3,7 +3,7 @@
 function scr_createCharObj(n) {
 	var charObj = instance_create_layer(0, 0, "Instances", obj_char);
 	
-	charObj.name = obj_controller.chars[n].name;
+	charObj.charName = obj_controller.chars[n].charName;
 	charObj.description = obj_controller.chars[n].description;
 	charObj.quest = obj_controller.chars[n].quest;
 	charObj.skillTree = obj_controller.chars[n].skills;
@@ -17,6 +17,7 @@ function scr_createCharObj(n) {
 	charObj.questsCompleted = "";
 	charObj.skillsCompleted = "";
 	charObj.partyPosition = array_length(obj_controller.party); // add to the end of party
+	charObj.speedOffset = 0;
 	
 	return charObj;
 }

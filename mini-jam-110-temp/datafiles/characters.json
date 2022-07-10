@@ -1,6 +1,6 @@
 [
   {
-    "name": "Pandora",
+    "charName": "Pandora",
     "description": "hewwo my name's pandora",
     "quest": "open a jar at all costs",
     "skills": ["asdf", "asdf2"],
@@ -11,7 +11,7 @@
     "attack": "damage (4)"
   },
   {
-    "name": "Thor",
+    "charName": "Thor",
     "description": "GRAWR Thor smash!!",
     "quest": "eat too many bananas",
     "skills": ["smite", "smite harder"],
@@ -22,7 +22,7 @@
     "attack": "damage (1) stun (1)"
   },
   {
-    "name": "Orpheus",
+    "charName": "Orpheus",
     "description": "doot doot music pretty don't look back",
     "quest": "HADES",
     "skills": ["run Forest run", "ahh references"],
@@ -33,7 +33,7 @@
     "attack": "charm ()"
   },
   {
-    "name": "Apollo",
+    "charName": "Apollo",
     "description": "hiyo just a normal person here",
     "quest": "normal person things nothing to see",
     "skills": ["allow the sun to consume the earth", "on second thought don't"],
