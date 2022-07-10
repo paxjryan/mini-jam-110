@@ -36,8 +36,8 @@ function scr_getCharArmor(partyIndex) {
 	return scr_getChar(partyIndex).armor;
 }
 
-function scr_getCharAttack(partyIndex) {
-	return scr_getChar(partyIndex).attack;
+function scr_getCharAttackAttributes(partyIndex) {
+	return scr_getChar(partyIndex).attackAttributes;
 }
 
 function scr_getCharExp(partyIndex) {

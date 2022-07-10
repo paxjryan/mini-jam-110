@@ -1,5 +1,5 @@
 // Run by combatChar object
-function scr_makeAttack(){
+function scr_makeAttack() {
 	// do attack effect. Need to parse char json attack attribute (ask pax). This should then be stored by 
 	//char object in a format the game can read. perhaps an array formatted [effect, number/value, target].
 	//This then can be modified for buff purposes, and displayed to the screen. combatChar has a copy
@@ -15,6 +15,7 @@ function scr_makeAttack(){
 	}
 	scr_setSpeed(maxSpeed);
 }
+
 function scr_resolveTarget(effect){
 	var _target;
 	var _back = (position > 2)
