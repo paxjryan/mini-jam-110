@@ -1,5 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+// This is going to have to be refactored heavily in the future -
+// the point of using a json file is so you don't have to type all these out
+
 function scr_charToIndex(charName){
 	switch(charName)
 	{

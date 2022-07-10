@@ -11,7 +11,7 @@ function scr_createCharObj(n) {
 	charObj.maxHealth = obj_controller.chars[n].maxHealth;
 	charObj.maxSpeed = obj_controller.chars[n].maxSpeed;
 	charObj.armor = obj_controller.chars[n].armor;
-	charObj.attack = obj_controller.chars[n].attack;
+	charObj.attackAttributes = obj_controller.chars[n].attack;
 	
 	charObj.exp = 0;
 	charObj.questsCompleted = "";
@@ -19,7 +19,7 @@ function scr_createCharObj(n) {
 	charObj.partyPosition = array_length(obj_controller.party); // add to the end of party
 	charObj.speedOffset = 0;
 	
-	charObj.attackAttributes = scr_parseAttack(charObj.attack);
+	//charObj.attackAttributes = scr_parseAttackString(charObj.attack);
 	
 	return charObj;
 }

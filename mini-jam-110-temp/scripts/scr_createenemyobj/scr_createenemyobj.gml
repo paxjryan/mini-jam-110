@@ -10,9 +10,9 @@ function scr_createEnemyObj(xPosition, yPosition, n) {
 	_enemyObj.maxSpeed = obj_controller.enemies[n].maxSpeed;
 	_enemyObj.speedOffset = obj_controller.enemies[n].speedOffset;
 	_enemyObj.armor = obj_controller.enemies[n].armor;
-	_enemyObj.attack = obj_controller.enemies[n].attack;
+	_enemyObj.attackAttributes = obj_controller.enemies[n].attack;
 	
-	_enemyObj.attackAttributes = scr_parseAttack(enemyObj.attack);
+	//_enemyObj.attackAttributes = scr_parseAttackString(enemyObj.attack);
 	
 	with _enemyObj
 	{

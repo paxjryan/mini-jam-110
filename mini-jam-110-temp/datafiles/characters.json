@@ -8,7 +8,7 @@
     "maxHealth": 10,
     "maxSpeed": 3,
     "armor": 0,
-    "attack": "damage (4)"
+    "attack": [ ["damage", 4, "enemy"] ]
   },
   {
     "charName": "Thor",
@@ -19,7 +19,7 @@
     "maxHealth": 14,
     "maxSpeed": 4,
     "armor": 1,
-    "attack": "damage (1) stun (1)"
+    "attack": [ ["damagestun", 1, "enemy"] ]
   },
   {
     "charName": "Orpheus",
@@ -30,7 +30,7 @@
     "maxHealth": 10,
     "maxSpeed": 4,
     "armor": 0,
-    "attack": "charm ()"
+    "attack": [ ["charm", -1, "enemy"] ]
   },
   {
     "charName": "Apollo",
@@ -41,6 +41,6 @@
     "maxHealth": 10,
     "maxSpeed": 5,
     "armor": 0,
-    "attack": "heal (6 ally)"
+    "attack": [ ["heal", 6, "allyWeakest"] ]
   }
 ]
