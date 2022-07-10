@@ -2,10 +2,14 @@
   "resources": [
     {"id":{"name":"scr_getChar","path":"scripts/scr_getChar/scr_getChar.yy",},"order":4,},
     {"id":{"name":"scr_getEvent","path":"scripts/scr_getEvent/scr_getEvent.yy",},"order":3,},
+<<<<<<< Updated upstream
     {"id":{"name":"scr_createBoxes","path":"scripts/scr_createBoxes/scr_createBoxes.yy",},"order":6,},
     {"id":{"name":"spr_pandora","path":"sprites/spr_pandora/spr_pandora.yy",},"order":12,},
     {"id":{"name":"spr_enemyPlaceholder","path":"sprites/spr_enemyPlaceholder/spr_enemyPlaceholder.yy",},"order":13,},
     {"id":{"name":"scr_initiateCombat","path":"scripts/scr_initiateCombat/scr_initiateCombat.yy",},"order":7,},
+=======
+    {"id":{"name":"scr_generateCharButtons","path":"scripts/scr_generateCharButtons/scr_generateCharButtons.yy",},"order":8,},
+>>>>>>> Stashed changes
     {"id":{"name":"rm_character","path":"rooms/rm_character/rm_character.yy",},"order":2,},
     {"id":{"name":"scr_actionSelected","path":"scripts/scr_actionSelected/scr_actionSelected.yy",},"order":0,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":5,},
