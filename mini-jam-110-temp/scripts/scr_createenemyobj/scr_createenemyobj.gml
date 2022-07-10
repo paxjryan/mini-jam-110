@@ -12,8 +12,6 @@ function scr_createEnemyObj(xPosition, yPosition, n) {
 	_enemyObj.armor = obj_controller.enemies[n].armor;
 	_enemyObj.attackAttributes = obj_controller.enemies[n].attack;
 	
-	//_enemyObj.attackAttributes = scr_parseAttackString(enemyObj.attack);
-	
 	with _enemyObj
 	{
 		scr_setMaxHealth(maxHealth)

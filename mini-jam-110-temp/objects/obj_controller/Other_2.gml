@@ -10,6 +10,9 @@ fights = scr_parseJson("fights.json");
 currentEvent = 0;
 currentChar = 0;
 
+// Pick seed
+randomize();
+
 // Initialize party to hold only main character
 party = [];
 array_push(party, scr_createCharObj(0));

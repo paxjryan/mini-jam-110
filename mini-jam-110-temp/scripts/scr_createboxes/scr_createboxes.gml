@@ -30,3 +30,9 @@ function scr_createSpeedBox(){
 	_speedBox.image_index = speedCounter;
 	return _speedBox;
 }
+function scr_createShieldBox(){
+	var _shieldBox = instance_create_layer(x + BOX_SIDE/2,y - (CHAR_HEIGHT/2+BOX_SIDE*2.5), "Instances",obj_box);
+	_shieldBox.sprite_index = spr_shieldBox;
+	_shieldBox.image_index = shieldCounter;
+	return _shieldBox;
+}

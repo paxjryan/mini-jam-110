@@ -1,4 +1,5 @@
 function scr_initiateCombat(fightNumber){
+	fightnum = fightNumber
 	// set characters and enemies. earlier in array is towards bottom of screen
 	//this array should be gotten from the 'pick your characters to fight' screen but for now is fine
 	partyPositions = [false, false, false, false];
@@ -38,9 +39,11 @@ function scr_initiateCombat(fightNumber){
 	
 	for (var i = 0; i < array_length(enemyFront); i++) {
 		array_push(enemyFrontline, scr_createEnemyObj(enemyX[i], enemyY[i], scr_enemyToIndex(enemyFront[i])))
+		enemyFrontline[i].position = i;
 	}
 	for (var i = 0; i < array_length(enemyBack); i++) {
 		array_push(enemyBackline, scr_createEnemyObj(enemyX[i + 2], enemyY[i + 2], scr_enemyToIndex(enemyBack[i])))
+		enemyBackline[i].position = i + 2;
 	}
 }
 
@@ -54,7 +57,6 @@ function scr_createCombatChar(start_x, start_y, char_position){
 	with _char
 	{
 		armor = owner.armor;
-		attack = owner.attack;
 		attackAttributes = owner.attackAttributes;
 		speedOffset = owner.speedOffset;
 		sprite_index = asset_get_index(owner.combatSprite);

@@ -6,7 +6,7 @@
 #macro FONT_SMALL fnt_pixel
 
 // Combat
-#macro STEP_TIME 120
+#macro STEP_TIME 50
 #macro ROOM_HEIGHT 180
 #macro ROOM_WIDTH 320
 #macro BOX_SIDE 16

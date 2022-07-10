@@ -41,6 +41,6 @@
     "maxHealth": 10,
     "maxSpeed": 5,
     "armor": 0,
-    "attack": [ ["heal", 6, "allyWeakest"] ]
+    "attack": [ ["heal", 6, "weakest ally"] ]
   }
 ]
