@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_turnBox",
-    "path": "sprites/spr_turnBox/spr_turnBox.yy",
+    "name": "spr_enemyPlaceholder",
+    "path": "sprites/spr_enemyPlaceholder/spr_enemyPlaceholder.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_turnBox",
+  "name": "obj_enemy",
   "tags": [],
   "resourceType": "GMObject",
 }
