@@ -1,16 +1,11 @@
 {
   "resources": [
-<<<<<<< Updated upstream
     {"id":{"name":"scr_getChar","path":"scripts/scr_getChar/scr_getChar.yy",},"order":4,},
     {"id":{"name":"scr_getEvent","path":"scripts/scr_getEvent/scr_getEvent.yy",},"order":3,},
-=======
     {"id":{"name":"scr_createBoxes","path":"scripts/scr_createBoxes/scr_createBoxes.yy",},"order":6,},
-    {"id":{"name":"scr_getCurrentChar","path":"scripts/scr_getCurrentChar/scr_getCurrentChar.yy",},"order":2,},
-    {"id":{"name":"scr_getCurrentEvent","path":"scripts/scr_getCurrentEvent/scr_getCurrentEvent.yy",},"order":1,},
     {"id":{"name":"spr_pandora","path":"sprites/spr_pandora/spr_pandora.yy",},"order":12,},
     {"id":{"name":"spr_enemyPlaceholder","path":"sprites/spr_enemyPlaceholder/spr_enemyPlaceholder.yy",},"order":13,},
     {"id":{"name":"scr_initiateCombat","path":"scripts/scr_initiateCombat/scr_initiateCombat.yy",},"order":7,},
->>>>>>> Stashed changes
     {"id":{"name":"rm_character","path":"rooms/rm_character/rm_character.yy",},"order":2,},
     {"id":{"name":"scr_actionSelected","path":"scripts/scr_actionSelected/scr_actionSelected.yy",},"order":0,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":5,},
@@ -29,16 +24,11 @@
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":9,},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"order":6,},
     {"id":{"name":"spr_healthBoxDark","path":"sprites/spr_healthBoxDark/spr_healthBoxDark.yy",},"order":10,},
-<<<<<<< Updated upstream
-    {"id":{"name":"obj_action2","path":"objects/obj_action2/obj_action2.yy",},"order":1,},
-    {"id":{"name":"obj_actionTextBox","path":"objects/obj_actionTextBox/obj_actionTextBox.yy",},"order":0,},
-=======
     {"id":{"name":"obj_action2","path":"objects/obj_action2/obj_action2.yy",},"order":4,},
     {"id":{"name":"obj_actionTextBox","path":"objects/obj_actionTextBox/obj_actionTextBox.yy",},"order":2,},
     {"id":{"name":"obj_charFight","path":"objects/obj_charFight/obj_charFight.yy",},"order":11,},
     {"id":{"name":"scr_combatStep","path":"scripts/scr_combatStep/scr_combatStep.yy",},"order":5,},
     {"id":{"name":"scr_setCurrentEvent","path":"scripts/scr_setCurrentEvent/scr_setCurrentEvent.yy",},"order":3,},
->>>>>>> Stashed changes
     {"id":{"name":"rm_action","path":"rooms/rm_action/rm_action.yy",},"order":1,},
     {"id":{"name":"spr_newGameButton","path":"sprites/spr_newGameButton/spr_newGameButton.yy",},"order":1,},
     {"id":{"name":"obj_action1","path":"objects/obj_action1/obj_action1.yy",},"order":0,},
@@ -53,12 +43,7 @@
     {"id":{"name":"scr_createCharObj","path":"scripts/scr_createCharObj/scr_createCharObj.yy",},"order":7,},
     {"id":{"name":"spr_action1","path":"sprites/spr_action1/spr_action1.yy",},"order":5,},
     {"id":{"name":"spr_turnBoxDark","path":"sprites/spr_turnBoxDark/spr_turnBoxDark.yy",},"order":11,},
-<<<<<<< Updated upstream
-    {"id":{"name":"obj_loadGameButton","path":"objects/obj_loadGameButton/obj_loadGameButton.yy",},"order":3,},
-=======
     {"id":{"name":"obj_loadGameButton","path":"objects/obj_loadGameButton/obj_loadGameButton.yy",},"order":1,},
-    {"id":{"name":"scr_setCurrentChar","path":"scripts/scr_setCurrentChar/scr_setCurrentChar.yy",},"order":4,},
->>>>>>> Stashed changes
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},"order":0,},
   ],
   "Options": [
