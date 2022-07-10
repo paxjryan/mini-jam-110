@@ -44,10 +44,11 @@ function scr_handleAttack(effect, targets, targetPositions, secondary, attacker)
 			}
 		break;
 	}
-	if(charFrontline == [] and charBackline == []){
+	// check if combat over (total chars or enemies = 0)
+	if(array_length(charFrontline) + array_length(charBackline) == 0){
 		scr_endCombat(false);
 	}
-	if(enemyFrontline == [] and enemyBackline == []){
+	if(array_length(enemyFrontline) + array_length(enemyBackline) == 0){
 		scr_endCombat(true);
 	}
 }

@@ -3,15 +3,12 @@
 function scr_combatStep(){
 	// there is a mechanic hidden here: who attacks first. Current vibe front to back
 	for (var i = 0; i < array_length(charFrontline); i++) {
-		//can't say if true b/c either false or an object. Hopefully false doesn't overlap obj ID
-		if (charFrontline[i] != false) {
-			with charFrontline[i] {
-				scr_setSpeed(speedCounter - 1);
-				if (speedCounter <= 0) {
-					//attack
-					scr_makeAttack();
-					//should take time bc animation
-				}
+		with charFrontline[i] {
+			scr_setSpeed(speedCounter - 1);
+			if (speedCounter <= 0) {
+				//attack
+				scr_makeAttack();
+				//should take time bc animation
 			}
 		}
 	}
