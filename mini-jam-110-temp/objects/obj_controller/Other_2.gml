@@ -37,4 +37,6 @@ party = [];
 array_push(party, scr_createCharObj(0));
 array_push(party, scr_createCharObj(1));
 array_push(party, scr_createCharObj(2));
-//array_push(party, scr_createCharObj(3));
+array_push(party, scr_createCharObj(3));
+
+show_message(spr_healthBox);

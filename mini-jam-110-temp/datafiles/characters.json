@@ -3,24 +3,44 @@
     "name": "Pandora",
     "description": "hewwo my name's pandora",
     "quest": "open a jar at all costs",
-    "skills": ["asdf", "asdf2"]
+    "skills": ["asdf", "asdf2"],
+    "sprite": "spr_pandora",
+    "maxHealth": 10,
+    "maxSpeed": 3,
+    "armor": 0,
+    "attack": "damage (4)"
   },
   {
     "name": "Thor",
     "description": "GRAWR Thor smash!!",
     "quest": "eat too many bananas",
-    "skills": ["smite", "smite harder"]
+    "skills": ["smite", "smite harder"],
+    "combatSprite": "spr_pandora",
+    "maxHealth": 14,
+    "maxSpeed": 4,
+    "armor": 1,
+    "attack": "damage (1) stun (1)"
   },
   {
     "name": "Orpheus",
     "description": "doot doot music pretty don't look back",
     "quest": "HADES",
-    "skills": ["run Forest run", "ahh references"]
+    "skills": ["run Forest run", "ahh references"],
+    "combatSprite": "spr_pandora",
+    "maxHealth": 10,
+    "maxSpeed": 4,
+    "armor": 0,
+    "attack": "charm ()"
   },
   {
     "name": "Apollo",
     "description": "hiyo just a normal person here",
     "quest": "normal person things nothing to see",
-    "skills": ["allow the sun to consume the earth", "on second thought don't"]
+    "skills": ["allow the sun to consume the earth", "on second thought don't"],
+    "combatSprite": "spr_pandora",
+    "maxHealth": 10,
+    "maxSpeed": 5,
+    "armor": 0,
+    "attack": "heal (6 ally)"
   }
 ]

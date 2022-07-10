@@ -26,7 +26,7 @@
     {"id":{"name":"spr_healthBoxDark","path":"sprites/spr_healthBoxDark/spr_healthBoxDark.yy",},"order":10,},
     {"id":{"name":"obj_action2","path":"objects/obj_action2/obj_action2.yy",},"order":4,},
     {"id":{"name":"obj_actionTextBox","path":"objects/obj_actionTextBox/obj_actionTextBox.yy",},"order":2,},
-    {"id":{"name":"obj_charFight","path":"objects/obj_charFight/obj_charFight.yy",},"order":1,},
+    {"id":{"name":"obj_combatChar","path":"objects/obj_combatChar/obj_combatChar.yy",},"order":1,},
     {"id":{"name":"scr_combatStep","path":"scripts/scr_combatStep/scr_combatStep.yy",},"order":0,},
     {"id":{"name":"rm_action","path":"rooms/rm_action/rm_action.yy",},"order":1,},
     {"id":{"name":"spr_newGameButton","path":"sprites/spr_newGameButton/spr_newGameButton.yy",},"order":1,},
@@ -89,7 +89,7 @@
     {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"characters.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":3035461389054378222,"filePath":"datafiles","resourceVersion":"1.0","name":"characters.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"events.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {

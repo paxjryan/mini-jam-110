@@ -13,9 +13,25 @@ function scr_getCharDescription(partyIndex) {
 }
 
 function scr_getCharQuest(partyIndex) {
-	return "quest: " + obj_controller.party[partyIndex].quest;
+	return obj_controller.party[partyIndex].quest;
 }
 
 function scr_getCharSkills(partyIndex) {
 	return obj_controller.party[partyIndex].skills;
+}
+
+function scr_getCharCombatSprite(partyIndex) {
+	return obj_controller.party[partyIndex].combatSprite;
+}
+function scr_getCharMaxHealth(partyIndex) {
+	return obj_controller.party[partyIndex].maxHealth;
+}
+function scr_getCharMaxSpeed(partyIndex) {
+	return obj_controller.party[partyIndex].maxSpeed;
+}
+function scr_getCharArmor(partyIndex) {
+	return obj_controller.party[partyIndex].armor;
+}
+function scr_getCharAttack(partyIndex) {
+	return obj_controller.party[partyIndex].attack;
 }

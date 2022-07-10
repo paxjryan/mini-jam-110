@@ -31,7 +31,7 @@
     "path": "folders/Objects/Combat.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_charFight",
+  "name": "obj_combatChar",
   "tags": [],
   "resourceType": "GMObject",
 }
