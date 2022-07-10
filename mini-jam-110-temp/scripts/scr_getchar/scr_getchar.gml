@@ -13,7 +13,7 @@ function scr_getCharDescription(partyIndex) {
 }
 
 function scr_getCharQuest(partyIndex) {
-	return obj_controller.party[partyIndex].quest;
+	return scr_getChar(partyIndex).quest;
 }
 
 function scr_getCharSkills(partyIndex) {
