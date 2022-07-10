@@ -4,7 +4,7 @@
     "description": "hewwo my name's pandora",
     "quest": "open a jar at all costs",
     "skills": ["asdf", "asdf2"],
-    "sprite": "spr_pandora",
+    "combatSprite": "spr_pandora",
     "maxHealth": 10,
     "maxSpeed": 3,
     "armor": 0,

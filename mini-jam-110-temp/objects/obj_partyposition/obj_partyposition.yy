@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_charButton",
-    "path": "sprites/spr_charButton/spr_charButton.yy",
+    "name": "spr_partyPositions",
+    "path": "sprites/spr_partyPositions/spr_partyPositions.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,8 +23,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +31,7 @@
     "path": "folders/Objects/Placeholder Buttons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_charButton",
+  "name": "obj_partyPosition",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -7,10 +7,11 @@ function scr_charButtonSelected(button) {
 	} else if (obj_controller.buttonSelected == button) {
 		obj_controller.buttonSelected = "";
 		room_goto(rm_character);
-	} else {
-		obj_controller.buttonSelected = "";
-		
+	} else {		
 		temp = obj_controller.buttonSelected.buttonId;
 		obj_controller.buttonSelected.buttonId = button.buttonId;
 		button.buttonId = temp;
+		
+		obj_controller.buttonSelected = "";
+	}
 }
