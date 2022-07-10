@@ -27,7 +27,7 @@ Character screen
 - DONE Character name
 - Character art
 - DONE Character description 
-- Personal quest
+- DONE Personal quest
 - Skill tree menu, separated by page
 
 Battle screen

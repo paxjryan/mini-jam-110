@@ -3,16 +3,16 @@
 function scr_charToIndex(charName){
 	switch(charName)
 	{
-	case "Pandora": return 0;
-	case "Thor": return 1;
-	case "Orpheus": return 2;
-	case "Apollo": return 3;
+		case "Pandora": return 0;
+		case "Thor": return 1;
+		case "Orpheus": return 2;
+		case "Apollo": return 3;
 	}
 }
 function scr_enemyToIndex(enemyName){
 	switch(enemyName)
 	{
-	case "Slime": return 0;
-	case "Shield Slime": return 1;
+		case "Slime": return 0;
+		case "Shield Slime": return 1;
 	}
 }

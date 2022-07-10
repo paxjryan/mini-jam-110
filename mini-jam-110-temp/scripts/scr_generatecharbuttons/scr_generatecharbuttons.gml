@@ -4,7 +4,7 @@ function scr_generateCharButtons(){
 	for (var i = 0; i < array_length(obj_controller.party); i++) {
 		instance_create_layer(288, 56+(32*i), "Instances", obj_charButton,
 			{ buttonId: i });
-		instance_create_layer(284, 56+(32*i), "Instances", obj_partyPosition,
-			{ image_index: 0 });
+		var partyPositionObj = instance_create_layer(294, 56+(32*i), "Instances", obj_partyPosition);
+		partyPositionObj.image_index = i;
 	}
 }

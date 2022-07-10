@@ -8,9 +8,14 @@ function scr_charButtonSelected(button) {
 		obj_controller.buttonSelected = "";
 		room_goto(rm_character);
 	} else {		
-		temp = obj_controller.buttonSelected.buttonId;
+		tempPartyPosition = obj_controller.party[obj_controller.buttonSelected.buttonId].partyPosition;
+		obj_controller.party[obj_controller.buttonSelected.buttonId].partyPosition = 
+			obj_controller.party[button.buttonId].partyPosition;
+		obj_controller.party[button.buttonId].partyPosition = tempPartyPosition;
+		
+		tempId = obj_controller.buttonSelected.buttonId;
 		obj_controller.buttonSelected.buttonId = button.buttonId;
-		button.buttonId = temp;
+		button.buttonId = tempId;
 		
 		obj_controller.buttonSelected = "";
 	}
