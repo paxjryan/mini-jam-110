@@ -1,0 +1,22 @@
+[
+  {
+    "enemyName": "Slime",
+    "description": "Slime slime slime. Basic bitch.",
+    "combatSprite": "spr_enemyPlaceholder",
+    "maxHealth": 5,
+    "maxSpeed": 3,
+    "speedOffset": 0,
+    "armor": 0,
+    "attack": "damage (2)"
+  },
+  {
+    "enemyName": "Shield Slime",
+    "description": "Shield Shield Shield.",
+    "combatSprite": "spr_enemyPlaceholder",
+    "maxHealth": 5,
+    "maxSpeed": 3,
+    "speedOffset": 0,
+    "armor": 0,
+    "attack": "damage (2) shield (2 self)"
+  }
+]

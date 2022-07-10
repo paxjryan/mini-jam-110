@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Tutorial",
+    "front": ["Slime"], 
+    "back": ["Slime"]
+  },
+  {
+    "name": "First",
+    "front": ["Shield Slime", "Shield Slime"], 
+    "back": ["Slime"]
+  }
+]
