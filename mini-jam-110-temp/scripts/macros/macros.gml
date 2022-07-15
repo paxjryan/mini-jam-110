@@ -7,6 +7,14 @@
 
 // Combat
 #macro STEP_TIME 50
+#macro PARTY_SIZE 4
+#macro MELEE 0
+#macro RANGED 1
+#macro BASIC_CHAR_MAX_SHIELD 99
+#macro BASIC_ENEMY_MAX_SHIELD 99
+#macro STUN_AMOUNT 1
+
+// Combat positioning
 #macro ROOM_HEIGHT 180
 #macro ROOM_WIDTH 320
 #macro BOX_SIDE 16

@@ -19,7 +19,5 @@ function scr_createCharObj(n) {
 	charObj.partyPosition = array_length(obj_controller.party); // add to the end of party
 	charObj.speedOffset = 0;
 	
-	//charObj.attackAttributes = scr_parseAttackString(charObj.attack);
-	
 	return charObj;
 }

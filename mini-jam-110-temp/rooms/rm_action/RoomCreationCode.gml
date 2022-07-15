@@ -1,1 +1,1 @@
-scr_generateCharButtons();
+scr_createCharButtons();

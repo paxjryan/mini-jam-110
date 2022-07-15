@@ -5,4 +5,3 @@ instance_destroy(healthBox);
 instance_destroy(maxSpeedBox);
 instance_destroy(speedBox);
 instance_destroy(shieldBox);
-//instance_destroy(armorBox);

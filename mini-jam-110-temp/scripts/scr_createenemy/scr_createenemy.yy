@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Combat.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_makeAttack",
+  "name": "scr_createEnemy",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -13,7 +13,7 @@ currentChar = 0;
 // Pick seed
 randomize();
 
-// Initialize party to hold only main character
+// Initialize party to hold first four characters for testing
 party = [];
 array_push(party, scr_createCharObj(0));
 array_push(party, scr_createCharObj(1));

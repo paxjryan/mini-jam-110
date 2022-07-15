@@ -1,54 +1,18 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_combatStep(){
-	// there is a mechanic hidden here: who attacks first. Current vibe front to back
-	for (var i = 0; i < array_length(charFrontline); i++) {
-		with charFrontline[i] {
-			scr_setSpeed(speedCounter - 1);
-			if (speedCounter <= 0) {
-				//attack
-				scr_makeAttack();
-				//should take time bc animation
-			}
-		}
-	}
-	for (var i = 0; i < array_length(charBackline); i++) {
-		//can't say if true b/c either false or an object. Hopefully false doesn't overlap obj ID
-		if(charBackline[i] != false){
-			with charBackline[i]{
-				scr_setSpeed(speedCounter - 1);
-				if(speedCounter <= 0){
-					//attack
-					scr_makeAttack();
-					//should take time bc animation
-				}
-			}
-		}
-	}
-	for (var i = 0; i < array_length(enemyFrontline); i++) {
-		//can't say if true b/c either false or an object. Hopefully false doesn't overlap obj ID
-		if(enemyFrontline[i] != false){
-			with enemyFrontline[i]{
-				scr_setSpeed(speedCounter - 1);
-				if(speedCounter <= 0){
-					//attack
-					scr_makeAttack();
-					//should take time bc animation
-				}
-			}
-		}
-	}
-	for (var i = 0; i < array_length(enemyBackline); i++) {
-		//can't say if true b/c either false or an object. Hopefully false doesn't overlap obj ID
-		if(enemyBackline[i] != false){
-			with enemyBackline[i]{
-				scr_setSpeed(speedCounter - 1);
-				if(speedCounter <= 0){
-					//attack
-					scr_makeAttack();
-					//should take time bc animation
-				}
-			}
+// Run by combatController
+function scr_combatStep() {
+	// loop through battleEntities
+	for (var e = ds_map_find_first(battleEntities); !is_undefined(e); e = ds_map_find_next(battleEntities, e)) {
+		// tick down speed
+		with e var sp = scr_loseSpeed(1);
+	
+		// it is time to attack!
+		if (sp <= 0) {
+			// build and resolve attack
+			scr_buildAttack(e);
+			// trigger scr_endCombat if combat is finished
+			scr_checkCombatFinished();
+			// reset speed to full
+			with e scr_setSpeed(maxSpeed);
 		}
 	}
 }

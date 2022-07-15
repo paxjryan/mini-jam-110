@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Combat.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_handleAttack",
+  "name": "scr_checkCombatFinished",
   "tags": [],
   "resourceType": "GMScript",
 }

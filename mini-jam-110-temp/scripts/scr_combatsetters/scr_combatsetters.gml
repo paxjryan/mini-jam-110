@@ -1,50 +1,73 @@
 // update later for negative numbers, also currently breaks with numbers > 19
 
-function scr_takeDamage(damage){
-	// * -1 so it's positive if overflows, b/c shieldCounter will be neg
-	damage = -1 * (scr_setShield(shieldCounter - damage))
-	//hidden mechanic: -= armor here b/c armor doesn't block damage to shield
-	damage -= armor;
-	damage = max(damage, 0);
-	return scr_setHealth(healthCounter - damage);
+function scr_addHealth(healthAmount) {
+	return scr_setHealth(healthCounter + healthAmount);
 }
 
-function scr_takeHealing(healAmount){
-	return scr_setHealth(min(maxHealth, healthCounter + healAmount));
+function scr_loseHealth(healthAmount) {
+	return scr_addHealth(-1 * healthAmount);
 }
 
-function scr_takeShield(shield){
-	scr_setShield(min(maxShield, shieldCounter + shield));
+function scr_addSpeed(speedAmount) {
+	return scr_setSpeed(speedCounter + speedAmount);
 }
 
-function scr_setHealth(newHealth){
-	healthCounter = min(newHealth, maxHealth);
-	healthBox.image_index = healthCounter;
+function scr_loseSpeed(speedAmount) {
+	return scr_addSpeed(-1 * speedAmount);
+}
+
+function scr_addShield(shieldAmount) {
+	return scr_setShield(shieldCounter + shieldAmount);
+}
+
+function scr_loseShield(shieldAmount) {
+	return scr_addShield(-1 * shieldAmount);
+}
+
+
+function scr_setHealth(newHealth) {
+	if (newHealth < 0) newHealth = 0;
+	
+	healthCounter = min(newHealth, maxHealth); // cannot set healthCounter higher than maxHealth
+	healthBox.image_index = healthCounter; 
 	return healthCounter;
 }
 
-function scr_setSpeed(newSpeed){
-	//not min(newSpeed, maxSpeed) b/c speed can go above max (as of now anyway)
-	speedCounter = newSpeed;
-	speedBox.image_index = max(speedCounter, 0);
+function scr_setSpeed(newSpeed) {
+	if (newSpeed < 0) newSpeed = 0;
+	
+	speedCounter = min(newSpeed, maxSpeed); // cannot set speedCounter higher than maxSpeed
+	speedBox.image_index = speedCounter; 
 	return speedCounter;
 }
 
-function scr_setMaxHealth(newHealth){
-	maxHealth = newHealth;
-	maxHealthBox.image_index = max(maxHealth, 0);
+function scr_setShield(newShield) {
+	if (newShield < 0) newShield = 0;
+	
+	shieldCounter = min(newShield, maxShield); // cannot set shieldCounter higher than maxShield
+	shieldBox.image_index = shieldCounter;
+	return shieldCounter;
+}
+
+function scr_setMaxHealth(newMaxHealth) {
+	if (newMaxHealth < 0) newMaxHealth = 0; 
+	
+	maxHealth = newMaxHealth;
+	maxHealthBox.image_index = maxHealth;
 	return maxHealth;
 }
 
-function scr_setMaxSpeed(newSpeed){
-	maxSpeed = newSpeed;
-	maxSpeedBox.image_index = max(maxSpeed, 0);
+function scr_setMaxSpeed(newMaxSpeed) {
+	if (newMaxSpeed < 0) newMaxSpeed = 0;
+	
+	maxSpeed = newMaxSpeed;
+	maxSpeedBox.image_index = maxSpeed; 
 	return maxSpeed;
 }
 
-// will output negative numbers when shield is overkilled
-function scr_setShield(newShield){
-	shieldCounter = newShield;
-	shieldBox.image_index = max(newShield, 0);
-	return newShield;
+function scr_setMaxShield(newMaxShield) {
+	if (newMaxShield < 0) newMaxShield = 0;
+	
+	maxShield = newMaxShield;
+	return newMaxShield;
 }
