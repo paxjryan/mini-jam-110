@@ -1,5 +1,5 @@
 // Run by combatController
-function scr_initiateCombat(fightIndex){
+function scr_initiateCombat(fightIndex) {
 	// Create a ds_map of battleEntities where:
 	// - key is battleEntity
 	// - value is battle position:
