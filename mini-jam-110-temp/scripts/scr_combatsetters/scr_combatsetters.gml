@@ -1,5 +1,3 @@
-// update later for negative numbers, also currently breaks with numbers > 19
-
 function scr_addHealth(healthAmount) {
 	return scr_setHealth(healthCounter + healthAmount);
 }

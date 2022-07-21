@@ -7,6 +7,7 @@ function scr_combatStep() {
 	
 		// it is time to attack!
 		if (sp <= 0) {
+			show_message("NEXT COMBAT ROUND");
 			// build and resolve attack
 			scr_buildAttack(e);
 			// trigger scr_endCombat if combat is finished

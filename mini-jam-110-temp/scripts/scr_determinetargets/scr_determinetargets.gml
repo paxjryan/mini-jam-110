@@ -16,18 +16,19 @@ function scr_determineTargets(pos, targetingType) {
 			break;
 		case "weakest ally":
 			// get ally list from front to back (aka front melee)
-			var targetList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
+			var allyList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
 			
-			for (var i = 0; i < array_length(targetList); i++) {
-				firstTarget = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
-				currentTarget = scr_mapLookupKeyFromValue(battleEntities, targetList[i]);
+			// targetList holds the current lowest-health ally
+			var targetList = [ allyList[0] ];
+			// loop through ally list
+			for (var i = 0; i < array_length(allyList); i++) {
+				mostDamagedAlly = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
+				currentAlly = scr_mapLookupKeyFromValue(battleEntities, allyList[i]);
 				
-				// if current target has lower health than the first target in the list,
-				// move it to the front of the list
-				if (currentTarget.healthCounter < firstTarget.healthCounter) {
-					targetList[0] = currentTarget;
-					targetList[i] = firstTarget;
-				}
+				// store iff current ally has more damage than current most-damaged ally
+				if ( (currentAlly.maxHealth - currentAlly.healthCounter) > 
+					 (mostDamagedAlly.maxHealth - mostDamagedAlly.healthCounter) )
+					targetList[0] = i;
 			}
 			
 			break;
