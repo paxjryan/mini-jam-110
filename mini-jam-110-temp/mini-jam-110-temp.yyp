@@ -57,7 +57,6 @@
     {"id":{"name":"spr_action1","path":"sprites/spr_action1/spr_action1.yy",},"order":5,},
     {"id":{"name":"spr_turnBoxDark","path":"sprites/spr_turnBoxDark/spr_turnBoxDark.yy",},"order":4,},
     {"id":{"name":"obj_loadGameButton","path":"objects/obj_loadGameButton/obj_loadGameButton.yy",},"order":1,},
-    {"id":{"name":"scr_getEnemyMatch","path":"scripts/scr_getEnemyMatch/scr_getEnemyMatch.yy",},"order":10,},
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},"order":0,},
   ],
   "Options": [
@@ -108,7 +107,7 @@
     {"CopyToMask":3035461389054378222,"filePath":"datafiles","resourceVersion":"1.0","name":"characters.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"events.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"enemies.json","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"fights.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":3035461389054378222,"filePath":"datafiles","resourceVersion":"1.0","name":"fights.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",

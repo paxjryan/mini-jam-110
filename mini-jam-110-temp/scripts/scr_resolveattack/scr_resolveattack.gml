@@ -26,6 +26,16 @@ function scr_resolveAttack(effect, amount, primaryTargets, secondaryTargets) {
 					return;
 			}
 		}
+		
+		// may need to change to work with overkill damage: healthCounter <= 0
+		if (primaryTargets[i].healthCounter == 0) {
+			// for debug
+			show_debug_message(primaryTargets[i].entityName + " DIED");
+			
+			// death animation here
+			ds_map_delete(battleEntities, primaryTargets[i]);
+			instance_destroy(primaryTargets[i]);
+		}
 	}
 }
 
@@ -38,15 +48,6 @@ function scr_takeDamage(damageAmount) {
 	
 	damageAmount = max(damageAmount, 0);
 	scr_loseHealth(damageAmount);
-	
-	// may need to change to work with overkill damage: healthCounter <= 0
-	if (healthCounter == 0) { 
-		// death animation here
-		ds_map_delete(battleEntities, self);
-		instance_destroy(self);
-		
-		return -1;
-	}
 	
 	return healthCounter;
 }

@@ -16,4 +16,6 @@ function scr_endCombat(playerWin){
 	}
 	
 	instance_destroy(self);
+	
+	// move to new room
 }

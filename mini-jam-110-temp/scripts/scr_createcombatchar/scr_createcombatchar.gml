@@ -7,7 +7,7 @@ function scr_createCombatChar(partyIndex) {
 	var _char = instance_create_layer(charXs[partyIndex], charYs[partyIndex], "Instances", obj_combatChar);
 	
 	// get attributes from obj_controller.party
-	_char.name = scr_getCharName(partyIndex);
+	_char.entityName = scr_getCharName(partyIndex);
 	_char.partyIndex = partyIndex;
 	_char.maxHealth = scr_getCharMaxHealth(partyIndex);
 	_char.maxSpeed = scr_getCharMaxSpeed(partyIndex);

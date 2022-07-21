@@ -11,13 +11,24 @@ function scr_determineTargets(pos, targetingType) {
 			var targetList = scr_getTargetList(pos, pos < PARTY_SIZE, RANGED);
 			break;
 		case "ally":
-			var targetList = scr_getTargetList(pos, !(pos < PARTY_SIZE), MELEE);
+			// get ally list from front to back (aka front melee)
+			var targetList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
 			break;
 		case "weakest ally":
-			// still broken, currently heals frontmost party member
-		
-			// get ally list
-			var targetList = scr_getTargetList(pos, !(pos < PARTY_SIZE), MELEE);
+			// get ally list from front to back (aka front melee)
+			var targetList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
+			
+			for (var i = 0; i < array_length(targetList); i++) {
+				firstTarget = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
+				currentTarget = scr_mapLookupKeyFromValue(battleEntities, targetList[i]);
+				
+				// if current target has lower health than the first target in the list,
+				// move it to the front of the list
+				if (currentTarget.healthCounter < firstTarget.healthCounter) {
+					targetList[0] = currentTarget;
+					targetList[i] = firstTarget;
+				}
+			}
 			
 			break;
 		case "self":
@@ -29,21 +40,23 @@ function scr_determineTargets(pos, targetingType) {
 			return;
 	}
 	
-			
-	for (var i = 0; i < array_length(targetList); i++) {
-		var e = scr_mapLookupKeyFromValue(battleEntities, i);
-		// secondary targets array is empty for now
-		if (e) return [ [e], [] ];		
-	}	
+	// return if no targets
+	if (array_length(targetList) == 0) return [ [], [] ];
 	
-	// no targets found; return empty double array
-	return [ [], [] ];
+	// returning only one target for now; get first target from targetList
+	var target = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
+	
+	// for debug
+	if (target) show_debug_message("TARGETING: " + target.entityName);
+	
+	// secondary targets array is empty for now
+	return [ [target], [] ];
 }
 
 // Takes in battleEntity's battle position, 
 // which side to target (0 for characters, 1 for enemies),
 // and melee/ranged (MELEE for melee, RANGED for ranged).
-// Returns a list of all possible targets in order of priority.
+// Returns a list of all possible targets in order of greatest to least priority.
 function scr_getTargetList(pos, side, ranged) {
 	var targetList = [];
 	side = PARTY_SIZE*side;
@@ -64,6 +77,26 @@ function scr_getTargetList(pos, side, ranged) {
 	// back ranged - target front to back
 	else
 		targetList = [first + side, second + side, first + side + 2, second + side + 2];
+	
+	// for debug
+	var targetString = "targets: ";
+	for (var i = 0; i < array_length(targetList); i++) 
+		targetString += string(targetList[i]) + " ";
+	show_debug_message(targetString);
+	
+	// filter out non-existing target positions
+	for (var i = 0; i < array_length(targetList); i++) {
+		if (!scr_mapLookupKeyFromValue(battleEntities, targetList[i])) {
+			array_delete(targetList, i, 1);
+			i--;
+		}
+	}
+	
+	// for debug
+	var targetString = "filtered targets: ";
+	for (var i = 0; i < array_length(targetList); i++) 
+		targetString += string(targetList[i]) + " ";
+	show_debug_message(targetString);
 		
 	return targetList;
 }

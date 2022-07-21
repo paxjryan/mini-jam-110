@@ -8,7 +8,7 @@ function scr_createEnemy(n, enemyPos) {
 	var _enemyObj = instance_create_layer(enemyXs[enemyPos], enemyYs[enemyPos], "Instances", obj_enemy);
 	
 	// get attributes from json (obj_controller.enemies)
-	_enemyObj.enemyName = obj_controller.enemies[n].enemyName;
+	_enemyObj.entityName = obj_controller.enemies[n].enemyName;
 	_enemyObj.description = obj_controller.enemies[n].description;
 	_enemyObj.maxHealth = obj_controller.enemies[n].maxHealth;
 	_enemyObj.maxSpeed = obj_controller.enemies[n].maxSpeed;
