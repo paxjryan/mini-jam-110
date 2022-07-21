@@ -18,4 +18,7 @@ function scr_checkCombatFinished() {
 	// hidden mechanic - players currently lose ties
 	if (playersExhausted) scr_endCombat(false);
 	else if (enemiesExhausted) scr_endCombat(true);
+	
+	// return true iff combat has finished
+	return (playersExhausted || enemiesExhausted);
 }

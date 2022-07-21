@@ -8,7 +8,7 @@ function scr_endCombat(playerWin){
 	
 	ds_map_destroy(battleEntities);
 	
-	// temp debugging
+	// for debug
 	if(playerWin) {
 		show_message("you win!");
 	} else {
