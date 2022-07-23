@@ -18,7 +18,7 @@ function scr_determineTargets(pos, targetingType) {
 			// get ally list from front to back (aka front melee)
 			var allyList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
 			
-			// targetList holds the current lowest-health ally
+			// targetList holds the ally who has taken the most damage
 			var targetList = [ allyList[0] ];
 			// loop through ally list
 			for (var i = 0; i < array_length(allyList); i++) {
@@ -27,8 +27,9 @@ function scr_determineTargets(pos, targetingType) {
 				
 				// store iff current ally has more damage than current most-damaged ally
 				if ( (currentAlly.maxHealth - currentAlly.healthCounter) > 
-					 (mostDamagedAlly.maxHealth - mostDamagedAlly.healthCounter) )
-					targetList[0] = i;
+					 (mostDamagedAlly.maxHealth - mostDamagedAlly.healthCounter) ) {
+					targetList[0] = allyList[i];
+				}
 			}
 			
 			break;
