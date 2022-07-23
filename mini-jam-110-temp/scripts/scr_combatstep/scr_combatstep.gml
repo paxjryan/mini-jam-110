@@ -1,19 +1,22 @@
 // Run by combatController
 function scr_combatStep() {
 	// loop through battleEntities
-	for (var e = ds_map_find_first(battleEntities); !is_undefined(e) && !scr_checkCombatFinished(); e = ds_map_find_next(battleEntities, e)) {
-		// tick down speed
-		with e var sp = scr_loseSpeed(1);
 	
-		// it is time to attack!
-		if (sp <= 0) {
-			show_message("NEXT COMBAT ROUND");
-			// build and resolve attack
-			scr_buildAttack(e);
-			//// trigger scr_endCombat if combat is finished
-			//scr_checkCombatFinished();
-			// reset speed to full
-			with e scr_setSpeed(maxSpeed);
-		}
+	// tick down speed
+	with currentAttacker var sp = scr_loseSpeed(1);
+
+	// it is time to attack!
+	if (sp <= 0) {
+		// build and resolve attack
+		scr_buildAttack(currentAttacker);
+		// reset speed to full
+		with currentAttacker scr_setSpeed(maxSpeed);
+	}
+	if(scr_checkCombatFinished()){
+		return false;
+	}
+	currentAttacker = ds_map_find_next(battleEntities, currentAttacker);
+	if(is_undefined(currentAttacker)){
+		currentAttacker = ds_map_find_first(battleEntities);
 	}
 }

@@ -47,7 +47,7 @@ function scr_takeDamage(damageAmount) {
 	damageAmount -= armor;
 	
 	damageAmount = max(damageAmount, 0);
-	scr_loseHealth(damageAmount);
+	var damageDone  = healthCounter - scr_loseHealth(damageAmount);
 	
 	return healthCounter;
 }

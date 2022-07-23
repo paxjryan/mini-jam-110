@@ -14,6 +14,11 @@ function scr_initiateCombat(fightIndex) {
 		
 		ds_map_add(battleEntities, scr_createCombatChar(i), obj_controller.party[i].partyPosition);
 	}
+	var test = ds_map_find_first(battleEntities);
+	for (var i = 0; i < ds_map_size(battleEntities); i++){
+		show_message(test.entityName)
+		test = ds_map_find_next(battleEntities, test);
+	}
 	
 	// should really implement enemy party size sooner or later
 	// add front enemies to battleEntities
@@ -33,6 +38,10 @@ function scr_initiateCombat(fightIndex) {
 		
 		ds_map_add(battleEntities, scr_createEnemy(scr_getEnemyMatch(enemyBack[i]), i+(PARTY_SIZE/2)), PARTY_SIZE+2+i);
 	}
+	
+	// set first attacker for combatStep: 	
+	currentAttacker = ds_map_find_first(battleEntities);
+	show_message(currentAttacker.entityName);
 }
 
 function scr_getEnemyMatch(enemyString) {
