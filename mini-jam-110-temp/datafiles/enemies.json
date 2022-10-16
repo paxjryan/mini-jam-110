@@ -7,7 +7,7 @@
     "maxSpeed": 3,
     "speedOffset": 0,
     "armor": 0,
-    "attack": [ ["damage", 2, "enemy"] ]
+    "attack": [ ["damage", 2, "melee"] ]
   },
   {
     "enemyName": "Shield Slime",
@@ -17,7 +17,7 @@
     "maxSpeed": 3,
     "speedOffset": 0,
     "armor": 0,
-    "attack": [ ["damage", 2, "enemy"],
+    "attack": [ ["damage", 2, "melee"],
                 ["shield", 2, "self"] ]
   }
 ]

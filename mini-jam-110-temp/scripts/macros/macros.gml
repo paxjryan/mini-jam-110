@@ -6,8 +6,10 @@
 #macro FONT_SMALL fnt_pixel
 
 // Combat
-#macro STEP_TIME 50
+#macro STEP_TIME 5
 #macro PARTY_SIZE 4
+#macro CHAR_SIDE 0
+#macro ENEMY_SIDE 1
 #macro MELEE 0
 #macro RANGED 1
 #macro BASIC_CHAR_MAX_SHIELD 99

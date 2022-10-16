@@ -4,15 +4,8 @@ function scr_checkCombatFinished() {
 	var enemiesExhausted = true;
 	
 	for (var i = 0; i < PARTY_SIZE; i++) {
-		if (scr_mapLookupKeyFromValue(battleEntities, i)) {
-			playersExhausted = false;
-		}
-	}
-	
-	for (var i = 4; i < 4 + PARTY_SIZE; i++) {
-		if (scr_mapLookupKeyFromValue(battleEntities, i)) {
-			enemiesExhausted = false;
-		}
+		if (i < array_length(combatChars) && combatChars[i]) playersExhausted = false;
+		if (i < array_length(combatEnemies) && combatEnemies[i]) enemiesExhausted = false;
 	}
 	
 	// hidden mechanic - players currently lose ties

@@ -33,7 +33,9 @@ function scr_resolveAttack(effect, amount, primaryTargets, secondaryTargets) {
 			show_debug_message(primaryTargets[i].entityName + " DIED");
 			
 			// death animation here
-			ds_map_delete(battleEntities, primaryTargets[i]);
+			var deceasedSideArray = primaryTargets[i].side == CHAR_SIDE ? combatChars : combatEnemies;
+			var deceasedPos = scr_getArrayIndex(deceasedSideArray, primaryTargets[i]);
+			array_delete(deceasedSideArray, deceasedPos, 1);
 			instance_destroy(primaryTargets[i]);
 		}
 	}

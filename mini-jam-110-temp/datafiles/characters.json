@@ -8,7 +8,7 @@
     "maxHealth": 10,
     "maxSpeed": 3,
     "armor": 0,
-    "attack": [ ["damage", 4, "enemy"] ]
+    "attack": [ ["damage", 4, "melee"] ]
   },
   {
     "charName": "Thor",
@@ -19,7 +19,7 @@
     "maxHealth": 14,
     "maxSpeed": 4,
     "armor": 1,
-    "attack": [ ["damagestun", 1, "enemy"] ]
+    "attack": [ ["damagestun", 1, "melee"] ]
   },
   {
     "charName": "Orpheus",
@@ -30,7 +30,7 @@
     "maxHealth": 10,
     "maxSpeed": 4,
     "armor": 0,
-    "attack": [ ["charm", -1, "enemy"] ]
+    "attack": [ ["charm", -1, "melee"] ]
   },
   {
     "charName": "Apollo",

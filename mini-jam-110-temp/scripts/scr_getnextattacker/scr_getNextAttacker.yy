@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_endCombat",
+  "name": "scr_getNextAttacker",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

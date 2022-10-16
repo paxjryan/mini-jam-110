@@ -6,6 +6,7 @@ function scr_createEnemy(n, enemyPos) {
 	var enemyYs = [ENEMY_0_Y, ENEMY_1_Y, ENEMY_2_Y, ENEMY_3_Y];
 	
 	var _enemyObj = instance_create_layer(enemyXs[enemyPos], enemyYs[enemyPos], "Instances", obj_enemy);
+	_enemyObj.side = ENEMY_SIDE;
 	
 	// get attributes from json (obj_controller.enemies)
 	_enemyObj.entityName = obj_controller.enemies[n].enemyName;

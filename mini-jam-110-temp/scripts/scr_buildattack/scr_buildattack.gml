@@ -11,7 +11,9 @@ function scr_buildAttack(attacker) {
 		// for debug
 		show_debug_message("effect: " + effect + ", amount: " + string(amount) + ", target type: " + targetType);
 		
-		var targets = scr_determineTargets(battleEntities[? attacker], targetType);
+		// determine targets
+		var attackerPos = scr_getArrayIndex(attacker.side ? combatChars : combatEnemies, attacker);
+		var targets = scr_determineTargets(attackerPos, attacker.side, targetType);
 		
 		if (array_length(targets[0]) == 0) {
 			//be sad. do the sad animation. if there's a combat log, log 'did attack, no targets'

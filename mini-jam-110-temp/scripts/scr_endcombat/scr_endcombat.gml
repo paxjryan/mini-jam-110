@@ -2,11 +2,10 @@
 // (need to double check that all allocated space is being freed)
 function scr_endCombat(playerWin){
 	// destroy all battleEntities
-	for (e = ds_map_find_first(battleEntities); !is_undefined(e); e = ds_map_find_next(battleEntities, e)) {
-		instance_destroy(e);
-	}
-	
-	ds_map_destroy(battleEntities);
+	for (var i = 0; i < array_length(combatChars); i++) 
+		if (combatChars[i]) instance_destroy(combatChars[i]);
+	for (var i = 0; i < array_length(combatEnemies); i++) 
+		if (combatEnemies[i]) instance_destroy(combatEnemies[i]);
 	
 	// for debug
 	if(playerWin) {

@@ -1,33 +1,28 @@
 // Run by combatController
 function scr_initiateCombat(fightIndex) {
-	// Create a ds_map of battleEntities where:
-	// - key is battleEntity
-	// - value is battle position:
-	//		0-3 characters (bottom front, top front, bottom back, top back)
-	//		4-7 enemies (bottom front, top front, bottom back, top back)
-	battleEntities = ds_map_create();
+	// array of combat characters and enemies, where position in array matches battle position
+	combatChars = [];
+	combatEnemies = [];
 	
 	// add combat characters to battleEntities
 	for (var i = 0; i < array_length(obj_controller.party); i++) {
 		// for debug
 		show_debug_message("Character added to combat: " + obj_controller.party[i].charName + " at position: " + string(obj_controller.party[i].partyPosition));
 		
-		ds_map_add(battleEntities, scr_createCombatChar(i), obj_controller.party[i].partyPosition);
-	}
-	var test = ds_map_find_first(battleEntities);
-	for (var i = 0; i < ds_map_size(battleEntities); i++){
-		show_message(test.entityName)
-		test = ds_map_find_next(battleEntities, test);
+		var partyPos = obj_controller.party[i].partyPosition;
+		combatChars[partyPos] = scr_createCombatChar(partyPos);
 	}
 	
-	// should really implement enemy party size sooner or later
+	// should really add support for more than two cols of enemies by turning these into a for loop,
+	// and the json from "front" and "back" attributes into a 2d array
+	
 	// add front enemies to battleEntities
 	var enemyFront = obj_controller.fights[fightIndex].front;
 	for (var i = 0; i < array_length(enemyFront); i++) {
 		// for debug
 		show_debug_message("Enemy added to combat: " + enemyFront[i] + " at position: " + string(PARTY_SIZE+i));
 		
-		ds_map_add(battleEntities, scr_createEnemy(scr_getEnemyMatch(enemyFront[i]), i), PARTY_SIZE+i);
+		combatEnemies[i] = scr_createEnemy(scr_getEnemyMatch(enemyFront[i]), i);
 	}
 	
 	// add back enemies to battleEntities
@@ -36,14 +31,14 @@ function scr_initiateCombat(fightIndex) {
 		// for debug
 		show_debug_message("Enemy added to combat: " + enemyBack[i] + " at position: " + string(PARTY_SIZE+2+i));
 		
-		ds_map_add(battleEntities, scr_createEnemy(scr_getEnemyMatch(enemyBack[i]), i+(PARTY_SIZE/2)), PARTY_SIZE+2+i);
+		combatEnemies[i+2] = scr_createEnemy(scr_getEnemyMatch(enemyBack[i]), i+2);
 	}
 	
-	// set first attacker for combatStep: 	
-	currentAttacker = ds_map_find_first(battleEntities);
-	show_message(currentAttacker.entityName);
+	// initialize nextAttackerPos for scr_getNextAttacker
+	nextAttackerPos = -1;
 }
 
+// returns the index in obj_controller.enemies of the enemy whose name matches enemyString
 function scr_getEnemyMatch(enemyString) {
 	for (var i = 0; i < array_length(obj_controller.enemies); i++) {
 		if (obj_controller.enemies[i].enemyName == enemyString) return i;

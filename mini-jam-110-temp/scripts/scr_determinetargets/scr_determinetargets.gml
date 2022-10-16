@@ -1,29 +1,35 @@
-// Run by combatController:
-// given a battleEntity's battle position and attack targetingType,
-// return a 2d array [ primaryTargets, secondaryTargets]
-function scr_determineTargets(pos, targetingType) {	
+// Run by combatController
+
+// Given a combatEntity's combat position, side (CHAR_SIDE or ENEMY_SIDE), and the attack targetingType
+// Returns a 2d array [ primaryTargets, secondaryTargets]
+function scr_determineTargets(pos, side, targetingType) {
+	// uses value stored in side to decide which array is opponents and which is allies
+	var opponents = side ? combatChars : combatEnemies;
+	var allies = side ? combatEnemies : combatChars;
+	
 	switch(targetingType) {
-		// target monsters if pos < PARTY_SIZE; characters if pos >= PARTY_SIZE
-		case "enemy":
-			var targetList = scr_getTargetList(pos, pos < PARTY_SIZE, MELEE);
+		case "melee":
+			var targetList = scr_getTargetList(pos, opponents, MELEE);
 			break;
 		case "ranged":
-			var targetList = scr_getTargetList(pos, pos < PARTY_SIZE, RANGED);
+			var targetList = scr_getTargetList(pos, opponents, RANGED);
 			break;
 		case "ally":
-			// get ally list from front to back (aka front melee)
-			var targetList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
+			// get filtered list of front allies (aka front melee)
+			var targetList = scr_getTargetList(0, allies, MELEE);
 			break;
 		case "weakest ally":
-			// get ally list from front to back (aka front melee)
-			var allyList = scr_getTargetList(0, !(pos < PARTY_SIZE), MELEE);
-			
+			// get filtered list of all allies (aka front ranged)
+			// slightly hacky but that do be how it be -- for now
+			var allyList = scr_getTargetList(0, allies, RANGED);
+		
 			// targetList holds the ally who has taken the most damage
 			var targetList = [ allyList[0] ];
+			
 			// loop through ally list
 			for (var i = 0; i < array_length(allyList); i++) {
-				mostDamagedAlly = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
-				currentAlly = scr_mapLookupKeyFromValue(battleEntities, allyList[i]);
+				mostDamagedAlly = targetList[0];
+				currentAlly = allyList[i];
 				
 				// store iff current ally has more damage than current most-damaged ally
 				if ( (currentAlly.maxHealth - currentAlly.healthCounter) > 
@@ -34,7 +40,7 @@ function scr_determineTargets(pos, targetingType) {
 			
 			break;
 		case "self":
-			var targetList = [self];
+			var targetList = [allies[pos]];
 			break;
 		default:
 			// targetingType not recognized
@@ -42,63 +48,56 @@ function scr_determineTargets(pos, targetingType) {
 			return;
 	}
 	
-	// return if no targets
-	if (array_length(targetList) == 0) return [ [], [] ];
-	
-	// returning only one target for now; get first target from targetList
-	var target = scr_mapLookupKeyFromValue(battleEntities, targetList[0]);
-	
 	// for debug
-	if (target) show_debug_message("TARGETING: " + target.entityName);
+	if (targetList[0]) show_debug_message("TARGETING: " + targetList[0].entityName);
 	
 	// secondary targets array is empty for now
-	return [ [target], [] ];
+	return [ [targetList[0]], [] ];
 }
 
-// Takes in battleEntity's battle position, 
-// which side to target (0 for characters, 1 for enemies),
-// and melee/ranged (MELEE for melee, RANGED for ranged).
-// Returns a list of all possible targets in order of greatest to least priority.
-function scr_getTargetList(pos, side, ranged) {
+// Given a combatEntity's combat position, combat entity array to target, and melee/ranged (MELEE or RANGED)
+// Returns a list of all possible targets in order of greatest to least priority
+function scr_getTargetList(pos, targetEntities, ranged) {
+	// targetListPos holds a list of potential target positions
+	// targetList holds a list of targets, with nonexistent targets filtered out
+	var targetListPos = [];
 	var targetList = [];
-	side = PARTY_SIZE*side;
 	
 	// get random order for attacks within column
 	first = irandom(1);
 	second = 1 - first;
 	
-	// front melee - target front to back
-	if ( (pos mod PARTY_SIZE) < (PARTY_SIZE/2) && !ranged) 
-		targetList = [first + side, second + side, first + side + 2, second + side + 2];
+	front = pos < PARTY_SIZE/2;	
+	
+	// front melee - target front
+	if (front && !ranged) 
+		targetListPos = [first, second];
 	// back melee  - can't target
-	else if ( (pos mod PARTY_SIZE) >= (PARTY_SIZE/2) && !ranged) 
-		targetList = [];
+	else if (!front && !ranged) 
+		targetListPos = [];
 	// front ranged - target back to front
-	else if ( (pos mod PARTY_SIZE) < (PARTY_SIZE/2) && ranged) 
-		targetList = [first + side + 2, second + side + 2, first + side, second + side];
-	// back ranged - target front to back
+	else if (front && ranged) 
+		targetListPos = [first + 2, second + 2, first, second];
+	// back ranged - target front
 	else
-		targetList = [first + side, second + side, first + side + 2, second + side + 2];
+		targetListPos = [first, second];
 	
-	// for debug
-	var targetString = "targets: ";
-	for (var i = 0; i < array_length(targetList); i++) 
-		targetString += string(targetList[i]) + " ";
-	show_debug_message(targetString);
-	
-	// filter out non-existing target positions
-	for (var i = 0; i < array_length(targetList); i++) {
-		if (!scr_mapLookupKeyFromValue(battleEntities, targetList[i])) {
-			array_delete(targetList, i, 1);
-			i--;
-		}
+	for (var i = 0; i < array_length(targetListPos); i++) {
+		if (targetEntities[targetListPos[i]])
+			array_push(targetList, targetEntities[targetListPos[i]]);
 	}
 	
-	// for debug
-	var targetString = "filtered targets: ";
-	for (var i = 0; i < array_length(targetList); i++) 
-		targetString += string(targetList[i]) + " ";
-	show_debug_message(targetString);
+	//// for debug
+	//var targetString = "targets: ";
+	//for (var i = 0; i < array_length(targetList); i++) 
+	//	targetString += string(targetList[i]) + " ";
+	//show_debug_message(targetString);
+	
+	//// for debug
+	//var targetString = "filtered targets: ";
+	//for (var i = 0; i < array_length(targetList); i++) 
+	//	targetString += string(targetList[i]) + " ";
+	//show_debug_message(targetString);
 		
 	return targetList;
 }
